@@ -6,5 +6,10 @@ pipeline {
         sh 'echo "This is Jenkins Blue Ocean"'
       }
     }
+    stage('') {
+      steps {
+        sh 'ls'
+      }
+    }
   }
 }
