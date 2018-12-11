@@ -6,9 +6,14 @@ pipeline {
         sh 'echo "This is Jenkins Blue Ocean"'
       }
     }
-    stage('') {
+    stage('error') {
       steps {
         sh 'ls'
+      }
+    }
+    stage('triggerOther') {
+      steps {
+        build 'testjob'
       }
     }
   }
