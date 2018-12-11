@@ -16,5 +16,10 @@ pipeline {
         build 'testjob'
       }
     }
+    stage('send mail') {
+      steps {
+        emailext(subject: 'test', body: 'this is blue ocean test mail', to: 'zhiye.feng@samsung.com')
+      }
+    }
   }
 }
